@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CircleLayer.h"
 
 @interface MenuLayer : CCLayer 
 {
 
 }
 
-@property (nonatomic, assign) CCLayer *circleLayer;
+@property (nonatomic, assign) CircleLayer *circles;
 
 @end

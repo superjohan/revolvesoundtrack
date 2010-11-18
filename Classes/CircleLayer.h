@@ -14,4 +14,12 @@
 
 }
 
+@property (nonatomic, retain) CCSprite *background1;
+@property (nonatomic, retain) CCSprite *background2;
+@property (nonatomic, retain) CCSprite *background3;
+
+- (void)showBackground1;
+- (void)showBackground2;
+- (void)showBackground3;
+
 @end
