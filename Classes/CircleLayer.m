@@ -45,7 +45,7 @@
 - (void)_configureCircles
 {
 	self.red1 = [CCSprite spriteWithFile:@"red-1.png"];
-	self.red1.opacity = 192;
+	self.red1.opacity = 0;
 	self.red1.position = ccp(512,500);
 	[self addChild:self.red1 z:4];
 	self.red2 = [CCSprite spriteWithFile:@"red-2.png"];
@@ -58,7 +58,7 @@
 	[self addChild:self.red3 z:4];
 	
 	self.green1 = [CCSprite spriteWithFile:@"green-1.png"];
-	self.green1.opacity = 192;
+	self.green1.opacity = 0;
 	self.green1.position = ccp(412,300);
 	[self addChild:self.green1 z:2];
 	self.green2 = [CCSprite spriteWithFile:@"green-2.png"];
@@ -71,7 +71,7 @@
 	[self addChild:self.green3 z:2];
 	
 	self.blue1 = [CCSprite spriteWithFile:@"blue-1.png"];
-	self.blue1.opacity = 192;
+	self.blue1.opacity = 0;
 	self.blue1.position = ccp(612,300);
 	[self addChild:self.blue1 z:3];
 	self.blue2 = [CCSprite spriteWithFile:@"blue-2.png"];
@@ -89,7 +89,7 @@
 	self.background1 = [CCSprite spriteWithFile:@"background.png"];
 	self.background1.scale = 1024;
 	self.background1.position = ccp(512,384);
-	self.background1.opacity = 255;
+	self.background1.opacity = 0;
 	[self addChild:self.background1 z:1];		
 	
 	self.background2 = [CCSprite spriteWithFile:@"background-2.png"];
@@ -199,6 +199,8 @@
 		[self _configureCircles];
 
 		self.timer = 0;
+		
+		[self showBackground1];
 		
 		[self schedule:@selector(_mainLoop:)];
 	}

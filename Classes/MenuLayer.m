@@ -40,7 +40,7 @@
 @synthesize menu2;
 @synthesize menu3;
 
-const NSInteger kActionDuration = 1;
+const NSInteger kActionDuration = 2;
 
 #pragma mark Private
 
@@ -59,7 +59,7 @@ const NSInteger kActionDuration = 1;
 	[self.menu2 runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:255]];
 	[self.menu3 runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:0]];	
 	[self.circles showBackground2];
-	[self.trackMenu runAction:[CCTintTo actionWithDuration:1 red:10 green:32 blue:65]];
+	[self.trackMenu runAction:[CCTintTo actionWithDuration:kActionDuration red:10 green:32 blue:65]];
 }
 
 - (void)_showColorScheme3
@@ -68,7 +68,7 @@ const NSInteger kActionDuration = 1;
 	[self.menu2 runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:0]];
 	[self.menu3 runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:255]];	
 	[self.circles showBackground3];
-	[self.trackMenu runAction:[CCTintTo actionWithDuration:1 red:190 green:212 blue:245]];
+	[self.trackMenu runAction:[CCTintTo actionWithDuration:kActionDuration red:190 green:212 blue:245]];
 }
 
 - (void)_track1Selected:(id)sender
@@ -147,12 +147,12 @@ const NSInteger kActionDuration = 1;
 {
 	if(self.menuVisible)
 	{
-		[self.trackMenu runAction:[CCFadeTo actionWithDuration:1 opacity:0]];
+		[self.trackMenu runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:0]];
 		self.menuVisible = NO;
 	}
 	else 
 	{
-		[self.trackMenu runAction:[CCFadeTo actionWithDuration:1 opacity:255]];
+		[self.trackMenu runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:255]];
 		self.menuVisible = YES;
 	}
 }
@@ -185,7 +185,7 @@ const NSInteger kActionDuration = 1;
 	self.trackMenu = [CCMenu menuWithItems:self.track1, self.track2, self.track3, self.track4, self.track5, self.track6, nil];
 	self.trackMenu.color = ccc3(64,43,10);
 	self.trackMenu.position = CGPointZero;
-	self.trackMenu.opacity = 255;
+	self.trackMenu.opacity = 0;
 	[self addChild:self.trackMenu z:5];
 }
 
@@ -197,7 +197,7 @@ const NSInteger kActionDuration = 1;
 	menuButton1.anchorPoint = ccp(0,0);
 	self.menu1 = [CCMenu menuWithItems:menuButton1, nil];
 	self.menu1.position = CGPointZero;
-	self.menu1.opacity = 255;
+	self.menu1.opacity = 0;
 	[self addChild:self.menu1 z:5];
 	
 	CCSprite *menuButtonSprite2 = [CCSprite spriteWithFile:@"menu-2.png"];
@@ -235,6 +235,9 @@ const NSInteger kActionDuration = 1;
 		
 		[self _configureMenu];
 		[self _configureMenuButton];
+		
+		[self.trackMenu runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:255]];
+		[self.menu1 runAction:[CCFadeTo actionWithDuration:kActionDuration opacity:255]];
 		
 		self.menuVisible = YES;
 	}
