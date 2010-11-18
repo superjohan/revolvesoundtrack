@@ -231,6 +231,15 @@
 		9007A5951295A12200751FC6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5921295A12200751FC6 /* background.png */; };
 		9007A5C31295A88800751FC6 /* menu-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5C11295A88800751FC6 /* menu-2.png */; };
 		9007A5C41295A88800751FC6 /* menu-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5C21295A88800751FC6 /* menu-3.png */; };
+		9007A5DE1295AC5700751FC6 /* blue-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5D51295AC5700751FC6 /* blue-1.png */; };
+		9007A5DF1295AC5700751FC6 /* blue-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5D61295AC5700751FC6 /* blue-2.png */; };
+		9007A5E01295AC5700751FC6 /* blue-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5D71295AC5700751FC6 /* blue-3.png */; };
+		9007A5E11295AC5700751FC6 /* green-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5D81295AC5700751FC6 /* green-1.png */; };
+		9007A5E21295AC5700751FC6 /* green-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5D91295AC5700751FC6 /* green-2.png */; };
+		9007A5E31295AC5700751FC6 /* green-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5DA1295AC5700751FC6 /* green-3.png */; };
+		9007A5E41295AC5700751FC6 /* red-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5DB1295AC5700751FC6 /* red-1.png */; };
+		9007A5E51295AC5700751FC6 /* red-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5DC1295AC5700751FC6 /* red-2.png */; };
+		9007A5E61295AC5700751FC6 /* red-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A5DD1295AC5700751FC6 /* red-3.png */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -477,6 +486,15 @@
 		9007A5921295A12200751FC6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9007A5C11295A88800751FC6 /* menu-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-2.png"; sourceTree = "<group>"; };
 		9007A5C21295A88800751FC6 /* menu-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-3.png"; sourceTree = "<group>"; };
+		9007A5D51295AC5700751FC6 /* blue-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-1.png"; sourceTree = "<group>"; };
+		9007A5D61295AC5700751FC6 /* blue-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-2.png"; sourceTree = "<group>"; };
+		9007A5D71295AC5700751FC6 /* blue-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-3.png"; sourceTree = "<group>"; };
+		9007A5D81295AC5700751FC6 /* green-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-1.png"; sourceTree = "<group>"; };
+		9007A5D91295AC5700751FC6 /* green-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-2.png"; sourceTree = "<group>"; };
+		9007A5DA1295AC5700751FC6 /* green-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-3.png"; sourceTree = "<group>"; };
+		9007A5DB1295AC5700751FC6 /* red-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-1.png"; sourceTree = "<group>"; };
+		9007A5DC1295AC5700751FC6 /* red-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-2.png"; sourceTree = "<group>"; };
+		9007A5DD1295AC5700751FC6 /* red-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-3.png"; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -857,6 +875,15 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9007A5D51295AC5700751FC6 /* blue-1.png */,
+				9007A5D61295AC5700751FC6 /* blue-2.png */,
+				9007A5D71295AC5700751FC6 /* blue-3.png */,
+				9007A5D81295AC5700751FC6 /* green-1.png */,
+				9007A5D91295AC5700751FC6 /* green-2.png */,
+				9007A5DA1295AC5700751FC6 /* green-3.png */,
+				9007A5DB1295AC5700751FC6 /* red-1.png */,
+				9007A5DC1295AC5700751FC6 /* red-2.png */,
+				9007A5DD1295AC5700751FC6 /* red-3.png */,
 				9007A5C11295A88800751FC6 /* menu-2.png */,
 				9007A5C21295A88800751FC6 /* menu-3.png */,
 				9007A5901295A12200751FC6 /* background-2.png */,
@@ -1075,6 +1102,15 @@
 				9007A5951295A12200751FC6 /* background.png in Resources */,
 				9007A5C31295A88800751FC6 /* menu-2.png in Resources */,
 				9007A5C41295A88800751FC6 /* menu-3.png in Resources */,
+				9007A5DE1295AC5700751FC6 /* blue-1.png in Resources */,
+				9007A5DF1295AC5700751FC6 /* blue-2.png in Resources */,
+				9007A5E01295AC5700751FC6 /* blue-3.png in Resources */,
+				9007A5E11295AC5700751FC6 /* green-1.png in Resources */,
+				9007A5E21295AC5700751FC6 /* green-2.png in Resources */,
+				9007A5E31295AC5700751FC6 /* green-3.png in Resources */,
+				9007A5E41295AC5700751FC6 /* red-1.png in Resources */,
+				9007A5E51295AC5700751FC6 /* red-2.png in Resources */,
+				9007A5E61295AC5700751FC6 /* red-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
