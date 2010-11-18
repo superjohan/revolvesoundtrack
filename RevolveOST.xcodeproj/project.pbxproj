@@ -225,6 +225,7 @@
 		9007A4BA129581BE00751FC6 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9007A4B9129581BE00751FC6 /* MenuLayer.m */; };
 		9007A4BD129581C800751FC6 /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9007A4BC129581C800751FC6 /* CircleLayer.m */; };
 		9007A4C1129582DB00751FC6 /* MonkeyLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9007A4C0129582DB00751FC6 /* MonkeyLove.ttf */; };
+		9007A57712959D0A00751FC6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007A57612959D0A00751FC6 /* menu.png */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -465,6 +466,7 @@
 		9007A4BB129581C800751FC6 /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
 		9007A4BC129581C800751FC6 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
 		9007A4C0129582DB00751FC6 /* MonkeyLove.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MonkeyLove.ttf; sourceTree = "<group>"; };
+		9007A57612959D0A00751FC6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -845,6 +847,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9007A57612959D0A00751FC6 /* menu.png */,
 				9007A4C0129582DB00751FC6 /* MonkeyLove.ttf */,
 				9007A48B12957FE500751FC6 /* 01.m4a */,
 				9007A48C12957FE500751FC6 /* 02.m4a */,
@@ -1051,6 +1054,7 @@
 				9007A49512957FE500751FC6 /* 05.m4a in Resources */,
 				9007A49612957FE500751FC6 /* 06.m4a in Resources */,
 				9007A4C1129582DB00751FC6 /* MonkeyLove.ttf in Resources */,
+				9007A57712959D0A00751FC6 /* menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

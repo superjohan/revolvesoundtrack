@@ -14,7 +14,6 @@
 
 }
 
-@property (nonatomic) NSInteger trackPlaying;
 @property (nonatomic, assign) CCLayer *circleLayer;
 
 @end

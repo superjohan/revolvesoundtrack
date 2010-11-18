@@ -9,10 +9,18 @@
 #import "MenuLayer.h"
 #import "SimpleAudioEngine.h"
 
+@interface MenuLayer()
+@property (nonatomic) NSInteger trackPlaying;
+@property (nonatomic, retain) CCMenu *trackMenu;
+@property (nonatomic) BOOL menuVisible;
+@end
+
 @implementation MenuLayer
 
 @synthesize trackPlaying;
 @synthesize circleLayer;
+@synthesize trackMenu;
+@synthesize menuVisible;
 
 #pragma mark Private
 
@@ -70,6 +78,20 @@
 	}
 }
 
+- (void)_toggleMenu:(id)sender
+{
+	if(self.menuVisible)
+	{
+		[self.trackMenu runAction:[CCFadeTo actionWithDuration:1 opacity:0]];
+		self.menuVisible = NO;
+	}
+	else 
+	{
+		[self.trackMenu runAction:[CCFadeTo actionWithDuration:1 opacity:255]];
+		self.menuVisible = YES;
+	}
+}
+
 #pragma mark Public
 
 -(id)init
@@ -95,26 +117,44 @@
 		CCMenuItem *track6 = [CCMenuItemFont itemFromString:@"night (beatless version)" target:self selector:@selector(_track6Selected:)];
 		
 		track1.anchorPoint = ccp(0,0);
-		track1.position = ccp(30,300);
+		track1.position = ccp(30,350);
 		track2.anchorPoint = ccp(0,0);
-		track2.position = ccp(30,250);
+		track2.position = ccp(30,300);
 		track3.anchorPoint = ccp(0,0);
-		track3.position = ccp(30,200);
+		track3.position = ccp(30,250);
 		track4.anchorPoint = ccp(0,0);
-		track4.position = ccp(30,150);
+		track4.position = ccp(30,200);
 		track5.anchorPoint = ccp(0,0);
-		track5.position = ccp(30,100);
+		track5.position = ccp(30,150);
 		track6.anchorPoint = ccp(0,0);
-		track6.position = ccp(30,50);
+		track6.position = ccp(30,100);
 		
-		CCMenu *menu = [CCMenu menuWithItems:track1, track2, track3, track4, track5, track6, nil];
+		self.trackMenu = [CCMenu menuWithItems:track1, track2, track3, track4, track5, track6, nil];
+		self.trackMenu.color = ccc3(64,43,10);
+		self.trackMenu.position = CGPointZero;
+		self.trackMenu.opacity = 255;
+		[self addChild:self.trackMenu z:5];
 		
-		[menu setColor:ccc3(65,43,10)];
-		[menu setPosition:CGPointZero];
-		[self addChild:menu z:5];
+		CCSprite *menuButtonSprite = [CCSprite spriteWithFile:@"menu.png"];
+		CCMenuItem *menuButton = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite selectedSprite:menuButtonSprite target:self selector:@selector(_toggleMenu:)];
+		menuButton.position = ccp(30, 30);
+		menuButton.anchorPoint = ccp(0,0);
+		CCMenu *menuButtonMenu = [CCMenu menuWithItems:menuButton, nil];
+		menuButtonMenu.position = CGPointZero;
+		[self addChild:menuButtonMenu z:5];
+		
+		self.menuVisible = YES;
 	}
 	
 	return self;
+}
+
+- (void)dealloc
+{
+	self.circleLayer = nil;
+	self.trackMenu = nil;
+	
+	[super dealloc];
 }
 
 @end

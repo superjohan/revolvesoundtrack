@@ -20,6 +20,7 @@
 	[scene addChild:circles];
 	
 	MenuLayer *menu = [MenuLayer node];
+	menu.circleLayer = circles;
 	[scene addChild:menu];
 	
 	return scene;
