@@ -132,6 +132,16 @@
 	self.blue1.position = ccp(512 + [self _xForPosition:bluePosition], 384 + [self _yForPosition:bluePosition]);
 	self.blue2.position = ccp(512 + [self _xForPosition:bluePosition], 384 + [self _yForPosition:bluePosition]);
 	self.blue3.position = ccp(512 + [self _xForPosition:bluePosition], 384 + [self _yForPosition:bluePosition]);
+	
+	self.red1.scale = 0.8 + sin(redPosition * 1.1) * .2;
+	self.red2.scale = 0.8 + sin(redPosition * 1.1) * .2;
+	self.red3.scale = 0.8 + sin(redPosition * 1.1) * .2;
+	self.green1.scale = 0.8 + sin(greenPosition * 1.1) * .2;
+	self.green2.scale = 0.8 + sin(greenPosition * 1.1) * .2;
+	self.green3.scale = 0.8 + sin(greenPosition * 1.1) * .2;
+	self.blue1.scale = 0.8 + sin(bluePosition * 1.1) * .2;
+	self.blue2.scale = 0.8 + sin(bluePosition * 1.1) * .2;
+	self.blue3.scale = 0.8 + sin(bluePosition * 1.1) * .2;
 }
 
 #pragma mark Public
