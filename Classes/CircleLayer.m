@@ -107,12 +107,12 @@
 
 - (CGFloat)_xForPosition:(CGFloat)thePosition
 {
-	return cos(thePosition) * 116;
+	return (cos(thePosition) * 116) + (sin(self.timer / 2) * 100);
 }
 
 - (CGFloat)_yForPosition:(CGFloat)thePosition
 {
-	return sin(thePosition) * 116;
+	return (sin(thePosition) * 116) + (cos(self.timer / 2) * 100);
 }
 
 - (void)_mainLoop:(ccTime)dt
