@@ -29,5 +29,11 @@
 		<key>opengles-1</key>
 		<true/>
 	</dict>
+	<key>UIPrerenderedIcon</key>
+	<string>YES</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
 </dict>
 </plist>
