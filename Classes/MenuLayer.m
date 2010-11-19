@@ -144,6 +144,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 1)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"01.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"01.m4a" loop:YES];
 
@@ -157,6 +158,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 2)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"02.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"02.m4a" loop:YES];
 		
@@ -170,6 +172,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 3)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"03.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"03.m4a" loop:YES];
 		
@@ -183,6 +186,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 4)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"04.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"04.m4a" loop:YES];
 		
@@ -196,6 +200,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 5)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"05.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"05.m4a" loop:YES];
 		
@@ -209,6 +214,7 @@ const CGFloat kShortActionDuration = .1f;
 {
 	if(self.trackPlaying != 6)
 	{
+		[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 		[[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"06.m4a"];
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"06.m4a" loop:YES];
 		
