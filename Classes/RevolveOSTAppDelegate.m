@@ -13,6 +13,7 @@
 @implementation RevolveOSTAppDelegate
 
 @synthesize window;
+@synthesize viewController;
 
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
@@ -34,22 +35,40 @@
 	// Obtain the shared director in order to...
 	CCDirector *director = [CCDirector sharedDirector];
 	
+	viewController = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+	viewController.wantsFullScreenLayout = YES;
+	
+	// Create the EAGLView manually
+	EAGLView *view = [EAGLView viewWithFrame:[window bounds]
+								 pixelFormat:kEAGLColorFormatRGBA8
+								 depthFormat:GL_DEPTH_COMPONENT24_OES
+						  preserveBackbuffer:NO];
+
+	[director setOpenGLView:view];
+	
 	// Sets landscape mode
-	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
+	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
 	
 	// Turn on display FPS
 	[director setDisplayFPS:NO];
 	
 	// Turn on multiple touches
-	EAGLView *view = [director openGLView];
+	//EAGLView *view = [director openGLView];
 	[view setMultipleTouchEnabled:YES];
 	
+	// make the OpenGLView a child of the view controller
+	[viewController.view addSubview:view];
+	
+	// make the View Controller a child of the main window
+	[window addSubview: viewController.view];
+	
+	[window makeKeyAndVisible];
+
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];	
 	
-		
 	[[CCDirector sharedDirector] runWithScene: [PlayerScene scene]];
 }
 

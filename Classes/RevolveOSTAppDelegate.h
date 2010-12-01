@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
 @interface RevolveOSTAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;
 }
 
 @property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) MainViewController *viewController;
 
 @end
