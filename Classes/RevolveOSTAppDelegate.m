@@ -39,11 +39,8 @@
 	viewController.wantsFullScreenLayout = YES;
 	
 	// Create the EAGLView manually
-	EAGLView *view = [EAGLView viewWithFrame:[window bounds]
-								 pixelFormat:kEAGLColorFormatRGBA8
-								 depthFormat:GL_DEPTH_COMPONENT24_OES
-						  preserveBackbuffer:NO];
-
+	EAGLView *view = [EAGLView viewWithFrame:window.bounds pixelFormat:kEAGLColorFormatRGBA8 depthFormat:GL_DEPTH_COMPONENT24_OES];
+	
 	[director setOpenGLView:view];
 	
 	// Sets landscape mode

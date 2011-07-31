@@ -25,7 +25,7 @@
 @property (nonatomic, retain) CCSprite *playing1;
 @property (nonatomic, retain) CCSprite *playing2;
 @property (nonatomic, retain) CCSprite *playing3;
-@property (nonatomic, retain) CCLabel *menuTip;
+@property (nonatomic, retain) CCLabelTTF *menuTip;
 @end
 
 @implementation MenuLayer
@@ -276,7 +276,8 @@ const CGFloat kShortActionDuration = .1f;
 - (void)_configureMenuButton
 {
 	CCSprite *menuButtonSprite1 = [CCSprite spriteWithFile:@"menu.png"];
-	CCMenuItem *menuButton1 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite1 selectedSprite:menuButtonSprite1 target:self selector:@selector(_toggleMenu:)];
+	CCSprite *menuButtonSprite1sel = [CCSprite spriteWithFile:@"menu.png"];
+	CCMenuItem *menuButton1 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite1 selectedSprite:menuButtonSprite1sel target:self selector:@selector(_toggleMenu:)];
 	menuButton1.position = ccp(40, 30);
 	menuButton1.anchorPoint = ccp(0,0);
 	self.menu1 = [CCMenu menuWithItems:menuButton1, nil];
@@ -285,7 +286,8 @@ const CGFloat kShortActionDuration = .1f;
 	[self addChild:self.menu1 z:5];
 	
 	CCSprite *menuButtonSprite2 = [CCSprite spriteWithFile:@"menu-2.png"];
-	CCMenuItem *menuButton2 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite2 selectedSprite:menuButtonSprite2 target:self selector:@selector(_toggleMenu:)];
+	CCSprite *menuButtonSprite2sel = [CCSprite spriteWithFile:@"menu-2.png"];
+	CCMenuItem *menuButton2 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite2 selectedSprite:menuButtonSprite2sel target:self selector:@selector(_toggleMenu:)];
 	menuButton2.position = ccp(40, 30);
 	menuButton2.anchorPoint = ccp(0,0);
 	self.menu2 = [CCMenu menuWithItems:menuButton2, nil];
@@ -294,7 +296,8 @@ const CGFloat kShortActionDuration = .1f;
 	[self addChild:self.menu2 z:5];
 	
 	CCSprite *menuButtonSprite3 = [CCSprite spriteWithFile:@"menu-3.png"];
-	CCMenuItem *menuButton3 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite3 selectedSprite:menuButtonSprite3 target:self selector:@selector(_toggleMenu:)];
+	CCSprite *menuButtonSprite3sel = [CCSprite spriteWithFile:@"menu-3.png"];
+	CCMenuItem *menuButton3 = [CCMenuItemSprite itemFromNormalSprite:menuButtonSprite3 selectedSprite:menuButtonSprite3sel target:self selector:@selector(_toggleMenu:)];
 	menuButton3.position = ccp(40, 30);
 	menuButton3.anchorPoint = ccp(0,0);
 	self.menu3 = [CCMenu menuWithItems:menuButton3, nil];
@@ -302,7 +305,7 @@ const CGFloat kShortActionDuration = .1f;
 	[self.menu3 setOpacity:0];
 	[self addChild:self.menu3 z:5];
 	
-	self.menuTip = [CCLabel labelWithString:@"menu" fontName:@"MonkeyLove" fontSize:48];
+	self.menuTip = [CCLabelTTF labelWithString:@"menu" fontName:@"MonkeyLove" fontSize:48];
 	self.menuTip.position = ccp(160, 52);
 	self.menuTip.color = ccc3(64,43,10);
 	self.menuTip.opacity = 0;
