@@ -266,10 +266,11 @@ const CGFloat kShortActionDuration = .1f;
 	self.track6.position = ccp(40,100);
 	
 	self.trackMenu = [CCMenu menuWithItems:self.track1, self.track2, self.track3, self.track4, self.track5, self.track6, nil];
-	self.trackMenu.color = ccc3(64,43,10);
+	[self.trackMenu setColor:ccc3(64,43,10)];
 	self.trackMenu.position = CGPointZero;
-	self.trackMenu.opacity = 0;
+	[self.trackMenu setOpacity:0];
 	[self addChild:self.trackMenu z:5];
+	[self.trackMenu setColor:ccc3(64,43,10)];
 }
 
 - (void)_configureMenuButton
@@ -280,7 +281,7 @@ const CGFloat kShortActionDuration = .1f;
 	menuButton1.anchorPoint = ccp(0,0);
 	self.menu1 = [CCMenu menuWithItems:menuButton1, nil];
 	self.menu1.position = CGPointZero;
-	self.menu1.opacity = 0;
+	[self.menu1 setOpacity:0];
 	[self addChild:self.menu1 z:5];
 	
 	CCSprite *menuButtonSprite2 = [CCSprite spriteWithFile:@"menu-2.png"];
@@ -289,7 +290,7 @@ const CGFloat kShortActionDuration = .1f;
 	menuButton2.anchorPoint = ccp(0,0);
 	self.menu2 = [CCMenu menuWithItems:menuButton2, nil];
 	self.menu2.position = CGPointZero;
-	self.menu2.opacity = 0;
+	[self.menu2 setOpacity:0];
 	[self addChild:self.menu2 z:5];
 	
 	CCSprite *menuButtonSprite3 = [CCSprite spriteWithFile:@"menu-3.png"];
@@ -298,7 +299,7 @@ const CGFloat kShortActionDuration = .1f;
 	menuButton3.anchorPoint = ccp(0,0);
 	self.menu3 = [CCMenu menuWithItems:menuButton3, nil];
 	self.menu3.position = CGPointZero;
-	self.menu3.opacity = 0;
+	[self.menu3 setOpacity:0];
 	[self addChild:self.menu3 z:5];
 	
 	self.menuTip = [CCLabel labelWithString:@"menu" fontName:@"MonkeyLove" fontSize:48];
