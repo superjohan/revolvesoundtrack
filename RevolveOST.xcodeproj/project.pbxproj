@@ -1176,7 +1176,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = RevolveOST;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B7B6BD98-F972-498A-852B-ACE03C05CF5D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7D9033DC-98DF-4539-A093-56DBDE10B1A6";
 				TARGETED_DEVICE_FAMILY = 2;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -1192,6 +1192,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				SKIP_INSTALL = YES;
 				VALID_ARCHS = "i386 armv7";
 			};
 			name = Debug;
@@ -1205,6 +1206,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				SKIP_INSTALL = YES;
 				VALID_ARCHS = "i386 armv7";
 				ZERO_LINK = NO;
 			};
